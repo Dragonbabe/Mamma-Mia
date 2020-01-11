@@ -1,49 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Project-1</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+
+<body>
     <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper red accent-4">
-          <a href="#" class="brand-logo"
-            ><i class="material-icons">whatshot</i>Mamma Mia</a
+        <nav>
+            <div class="nav-wrapper red accent-4">
+                <a href="#" class="brand-logo"><i class="material-icons">whatshot</i>Mamma Mia</a
           >
           <ul id="nav-mobile" class="right">
             <li>
               <a href="index.html"><i class="material-icons">home</i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+                </li>
+                </ul>
+            </div>
+        </nav>
     </div>
 
     <div class="row">
-      <div class="col s12 m4 l3">
-        <div class="collapsible">
-          <div class="collapsible-header">
-            <i class="material-icons">favorite</i>Favorite Events
-          </div>
-          <div
-            class="collapsible-body"
-            style="display: block"
-            id="favoriteList"
-          >
-            <div class="action-btn right">
-              <a class="waves-effect waves-teal btn-flat" id="delete-button"
-                ><i class="material-icons">close</i></a
+        <div class="col s12 m4 l3">
+            <div class="collapsible">
+                <div class="collapsible-header">
+                    <i class="material-icons">favorite</i>Favorite Events
+                </div>
+                <div class="collapsible-body" style="display: block" id="favoriteList">
+                    <div class="action-btn right">
+                        <a class="waves-effect waves-teal btn-flat" id="delete-button"><i class="material-icons">close</i></a
               >
             </div>
           </div>
@@ -52,49 +42,67 @@
           <a class="btn-small indigo darken-4" id="clear-button">
             Clear
           </a>
-        </div>
-      </div>
-      <div class="col s12 m8 l9">
-        <div class="container">
-          <ul class="carousel">
-            <li class="carousel-item">
-              <a href="#one!"
-                ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKXs3GywdH9_zobNl3zQsxyQZd8R5Tob-dbbnuKmy39429p0i&s"
-              /></a>
-            </li>
-            <li class="carousel-item">
-              <a href="#two!"
-                ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5gmpJSlaDZOaWdLZpvljdRnPRU_cQtxQ_19DRCuGs6F9pQ9hHeQ&s"
-              /></a>
-            </li>
-            <li class="carousel-item">
-              <a href="#three!"
-                ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyKw2BEi7FOzwziuJUivqDP15T4pjrqr9MCyp8NMPdVgdr2ajw&s"
-              /></a>
-            </li>
-            <li class="carousel-item">
-              <a href="#four!"
-                ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4JgzD9WhIx7thUl7To7xWFJqodKl_q6W0GCCBjkjvp5m7uoF&s"
-              /></a>
-            </li>
-            <li class="carousel-item">
-              <a href="#five!"
-                ><img
-                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtgSsBFg5TZ5dokHxUy02x6PfdpnLuoB-7j1F4Esq1TGRPQBjNdQ&s"
-              /></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
+                    </div>
+                </div>
+                <div class="col s12 m8 l9">
+                    <div class="container">
+                        <ul class="carousel">
+                            <li class="carousel-item">
+                                <a href="#one!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaKXs3GywdH9_zobNl3zQsxyQZd8R5Tob-dbbnuKmy39429p0i&s" /></a>
+                            </li>
+                            <li class="carousel-item">
+                                <a href="#two!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5gmpJSlaDZOaWdLZpvljdRnPRU_cQtxQ_19DRCuGs6F9pQ9hHeQ&s" /></a>
+                            </li>
+                            <li class="carousel-item">
+                                <a href="#three!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyKw2BEi7FOzwziuJUivqDP15T4pjrqr9MCyp8NMPdVgdr2ajw&s" /></a>
+                            </li>
+                            <li class="carousel-item">
+                                <a href="#four!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQF4JgzD9WhIx7thUl7To7xWFJqodKl_q6W0GCCBjkjvp5m7uoF&s" /></a>
+                            </li>
+                            <li class="carousel-item">
+                                <a href="#five!"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtgSsBFg5TZ5dokHxUy02x6PfdpnLuoB-7j1F4Esq1TGRPQBjNdQ&s" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row">
+                        <div class="col s3">
+                            <form>
+                                <div class="input-field">
+                                    <input type="text" class="location">
+                                    <label for="search" class="label-icon"><i class="material-icons">location_on</i></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col s3">
+                            <form>
+                                <div class="input-field">
+                                    <input type="text" class="datepicker">
+                                    <label for="search" class="label-icon"><span><i class="material-icons">calendar_today</i></span></label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col s4">
+                            <form>
+                                <div class="input-field">
+                                    <input id="search" type="search" placeholder="Search for artist, city or venue" required>
+                                    <label for="search" class="label-icon"><i class="material-icons">search</i></label>
+                                    <i class="material-icons">close</i>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col s2">
+                            <button class="btn waves-effect"> Search</button>
+                        </div>
+                    </div>
+                </div>
 
-    <!--JavaScript Links-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>
-  </body>
+            </div>
+
+
+            <!--JavaScript Links-->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script src="script.js"></script>
+</body>
+
 </html>
