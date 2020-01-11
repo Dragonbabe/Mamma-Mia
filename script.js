@@ -3,9 +3,7 @@ $(document).ready(function() {
     var googleAPIKey = "AIzaSyAJuCV6lv5kU5C-95rJI6OLoWKCBAdTxe4";
     var weatherAPIKey = "bd0de12b6775f4d6b86662aff41e13a3";
 
-    var favoriteList = $("#favoriteList");
-    var editBtn = $("#edit-button");
-    var saveBtn = $("save-button");
+    var favoriteList = $("#favorite-list");
     var clearBtn = $("#clear-button");
 
     var mainCarousel = document.querySelector(".carousel");
