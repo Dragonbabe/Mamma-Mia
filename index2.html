@@ -37,17 +37,72 @@
     <div class="container">
       <div class="row">
         <div class="col s12">
-          <ul class="tabs">
-            <li class="tab col s4"><a href="#artist-section">Artist</a></li>
-            <li class="tab col s4"><a href="#info-section">Info</a></li>
-            <li class="tab col s4"><a href="#weather-section">Weather</a></li>
-          </ul>
-          <div class="container">
-            <div id="artist-section" class="col s12">artist</div>
-            <div id="info-section" class="col s12">location</div>
-            <div id="weather-section" class="col s12">weather</div>
+          <div class="row">
+              <div class="card col s4">
+                <h5 style="text-align: center;">Artist</h5>
+               <!-- <div id="artist-section" class="col s12"></div> -->
+              </div>
+              
+              <div class="card col s4">
+                <h5 style="text-align: center;">Concert Info</h5>
+                <!-- <div id="info-section" class="col s12"></div> -->
+              </div>
+              <div class="card col s4">
+                <h5 style="text-align: center;">Weather</h5>
+                <!-- <div id="weather-section" class="col s12"></div> -->
+              </div>
           </div>
-        </div>
+
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                  <div class="card col s4" id = "artist-info">
+                    <h5 style="text-align: center;"></h5>
+                    <p></p>
+                   <!-- <div id="artist-section" class="col s12"></div> -->
+                  </div>
+                  
+                  <div class="card col s4" id = "concert-info">
+                    <h5 style="text-align: center;"></h5>
+                    <!-- <div id="info-section" class="col s12"></div> -->
+                  </div>
+                  <div class="card col s4" id = "event-weather">
+                    <h5 style="text-align: center;"></h5>
+                    <!-- <div id="weather-section" class="col s12"></div> -->
+                  </div>
+              </div>
+
+      <div id="artist-list">
+
+<!-- javascript draft of what's to come -->
+        <!-- <script> -->
+          <!-- for (i in object.length) { -->
+            <!-- let html = '<div class="row">'  -->
+            <!-- + '<div class="col s4">' -->
+            <!-- + '<h6>' + object.array[i].name + '</h6>' -->
+            
+              <!-- + '</div>' -->
+            <!-- + '<div class="col s4">' -->
+            <!-- + '<h6>' + object.array[i].info + '</h6>' -->
+
+            <!-- +'</div>' -->
+            <!-- + '<div class="col s4">' -->
+            <!-- + '<h6>' +object.array[i].weather + '</h6>' -->
+              
+              <!-- +'</div>' -->
+
+
+              <!-- + '</div>' -->
+          <!-- $('#artist-list').append(html); -->
+          <!-- } -->
+          <!-- </script> -->
+
+
+
+      </div>
+
+
+        </ul>
       </div>
     </div>
 
