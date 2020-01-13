@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Project-1</title>
+    <title>Mamma Mia</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
   <body>
     <div class="navbar-fixed">
@@ -25,46 +26,83 @@
             <li>
               <a href="index.html"><i class="material-icons">home</i></a>
             </li>
+            <li>
+              <a href="favorite.html"><i class="material-icons">favorite</i></a>
+            </li>
           </ul>
         </div>
       </nav>
     </div>
 
-    <div class="row">
-      <div class="col s12 m4 l3">
-        <div class="collapsible">
-          <div class="collapsible-header">
-            <i class="material-icons">favorite</i>Favorites
+    <div class="container">
+      <div class="row">
+        <div class="col s12">
+          <div class="row">
+              <div class="card col s4">
+                <h5 style="text-align: center;">Artist</h5>
+               <!-- <div id="artist-section" class="col s12"></div> -->
+              </div>
+              
+              <div class="card col s4">
+                <h5 style="text-align: center;">Concert Info</h5>
+                <!-- <div id="info-section" class="col s12"></div> -->
+              </div>
+              <div class="card col s4">
+                <h5 style="text-align: center;">Weather</h5>
+                <!-- <div id="weather-section" class="col s12"></div> -->
+              </div>
           </div>
-          <div
-            class="collapsible-body"
-            style="display: block"
-            id="favoriteList"
-          >
-            <div class="action-btn right">
-              <a class="waves-effect waves-teal btn-flat" id="delete-button"
-                ><i class="material-icons">close</i></a
-              >
-            </div>
-          </div>
-        </div>
-        <div class="action-btn right">
-          <a class="btn-small indigo darken-4" id="clear-button">
-            Clear
-          </a>
-        </div>
+
+          <div class="row">
+            <div class="col s12">
+              <div class="row">
+                  <div class="card col s4" id = "artist-info">
+                    <h5 style="text-align: center;"></h5>
+                    <p></p>
+                   <!-- <div id="artist-section" class="col s12"></div> -->
+                  </div>
+                  
+                  <div class="card col s4" id = "concert-info">
+                    <h5 style="text-align: center;"></h5>
+                    <!-- <div id="info-section" class="col s12"></div> -->
+                  </div>
+                  <div class="card col s4" id = "event-weather">
+                    <h5 style="text-align: center;"></h5>
+                    <!-- <div id="weather-section" class="col s12"></div> -->
+                  </div>
+              </div>
+
+      <div id="artist-list">
+
+<!-- javascript draft of what's to come -->
+        <!-- <script> -->
+          <!-- for (i in object.length) { -->
+            <!-- let html = '<div class="row">'  -->
+            <!-- + '<div class="col s4">' -->
+            <!-- + '<h6>' + object.array[i].name + '</h6>' -->
+            
+              <!-- + '</div>' -->
+            <!-- + '<div class="col s4">' -->
+            <!-- + '<h6>' + object.array[i].info + '</h6>' -->
+
+            <!-- +'</div>' -->
+            <!-- + '<div class="col s4">' -->
+            <!-- + '<h6>' +object.array[i].weather + '</h6>' -->
+              
+              <!-- +'</div>' -->
+
+
+              <!-- + '</div>' -->
+          <!-- $('#artist-list').append(html); -->
+          <!-- } -->
+          <!-- </script> -->
+
+
+
       </div>
-      <div class="col s12 m8 l9">
-        <ul class="tabs">
-          <li class="tab col s4"><a href="#artist-section">Artist</a></li>
-          <li class="tab col s4"><a href="#location-section">Location</a></li>
-          <li class="tab col s4"><a href="#weather-section">Weather</a></li>
+
+
         </ul>
-        <div class="container">
-          <div id="artist-section" class="col s12">artist</div>
-          <div id="location-section" class="col s12">location</div>
-          <div id="weather-section" class="col s12">weather</div>
-        </div>
       </div>
     </div>
 
