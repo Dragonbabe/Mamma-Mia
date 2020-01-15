@@ -21,9 +21,5 @@ $(document).ready(function() {
      });
     }
     showEvents();
-
-    function getWeather() {
-
-    };
 });
 
