@@ -36,79 +36,54 @@
 
     <div class="container">
       <div class="row">
-        <div class="col s12">
-          <div class="row">
-              <div class="card col s4">
-                <h5 style="text-align: center;">Artist</h5>
-               <!-- <div id="artist-section" class="col s12"></div> -->
-              </div>
-              
-              <div class="card col s4">
-                <h5 style="text-align: center;">Concert Info</h5>
-                <!-- <div id="info-section" class="col s12"></div> -->
-              </div>
-              <div class="card col s4">
-                <h5 style="text-align: center;">Weather</h5>
-                <!-- <div id="weather-section" class="col s12"></div> -->
-              </div>
+        <div class="col s4">
+          <div class="card">
+            <div class="card-title center" id="artist-name"></div>
+            <div class="card-image" id="artist-image">
+            </div>
+            <div class="card-content">
+              <p>
+                This will show a pic of artist on top and the artist name (all
+                members if it's a group) below
+              </p>
+            </div>
           </div>
-
-          <div class="row">
-            <div class="col s12">
-              <div class="row">
-                  <div class="card col s4" id = "artist-info">
-                    <h5 style="text-align: center;"></h5>
-                    <p></p>
-                   <!-- <div id="artist-section" class="col s12"></div> -->
-                  </div>
-                  
-                  <div class="card col s4" id = "concert-info">
-                    <h5 style="text-align: center;"></h5>
-                    <!-- <div id="info-section" class="col s12"></div> -->
-                  </div>
-                  <div class="card col s4" id = "event-weather">
-                    <h5 style="text-align: center;"></h5>
-                    <!-- <div id="weather-section" class="col s12"></div> -->
-                  </div>
-              </div>
-
-      <div id="artist-list">
-
-<!-- javascript draft of what's to come -->
-        <!-- <script> -->
-          <!-- for (i in object.length) { -->
-            <!-- let html = '<div class="row">'  -->
-            <!-- + '<div class="col s4">' -->
-            <!-- + '<h6>' + object.array[i].name + '</h6>' -->
-            
-              <!-- + '</div>' -->
-            <!-- + '<div class="col s4">' -->
-            <!-- + '<h6>' + object.array[i].info + '</h6>' -->
-
-            <!-- +'</div>' -->
-            <!-- + '<div class="col s4">' -->
-            <!-- + '<h6>' +object.array[i].weather + '</h6>' -->
-              
-              <!-- +'</div>' -->
-
-
-              <!-- + '</div>' -->
-          <!-- $('#artist-list').append(html); -->
-          <!-- } -->
-          <!-- </script> -->
-
-
-
+        </div>
+        <div class="col s4">
+          <div class="card">
+            <div class="card-title center">Concert Info</div>
+            <div class="card-image" id="venue-image"></div>
+            <div class="card-content">
+              <p>
+                This will show a pic of the venue on top with name of venue and the concert start
+                date/time below
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col s4">
+          <div class="card">
+            <div class="card-title center">Weather</div>
+            <div class="card-content">
+              <p>
+                This will show an icon of the weather on top and temperature,
+                humidity, wind below
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
+    </div>
 
-
-        </ul>
-      </div>
+    <div class="fixed-action-btn" id="add-button">
+      <a class="btn-floating btn-large red">
+        <i class="material-icons">favorite_border</i>
+      </a>
     </div>
 
     <!--JavaScript Links-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script2.js"></script>
   </body>
 </html>
