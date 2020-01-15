@@ -15,10 +15,10 @@ $(document).ready(function() {
 
     searchBtn.on("click", function(event) {
         event.preventDefault();
-        // $("#search-container").remove();
-        // var searchContainer = $("<div>");
-        // $(searchContainer).attr("id", "search-container")
-        // $("#big-container").append(searchContainer);
+        $("#search-container").remove();
+        var searchContainer = $("<div>");
+        $(searchContainer).attr("id", "search-container")
+        $("#big-container").append(searchContainer);
         getEvents();
     });
 
