@@ -4,7 +4,8 @@ $(document).ready(function() {
   var queryString = window.location.search;
   var urlParams = new URLSearchParams(queryString);
   var product = urlParams.get("id");
-
+  var searchInput = $("#location").val();
+  console.log("ehekjhkjhdsfhds", queryString, urlParams, product, searchInput);
   function showEvents() {
     var queryURL =
       "https://app.ticketmaster.com/discovery/v2/events/" +
@@ -27,14 +28,23 @@ $(document).ready(function() {
   showEvents();
 
   function getWeather() {
+    localStorage.getItem("location");
     var weatherQueryURL =
-      "https://api.openweathermap.org/data/2.5/weather?q=city=&units=imperial=appid" +
+      "https://api.openweathermap.org/data/2.5/weather?q=" +
+      localStorage.getItem("location") +
+      "&units=imperial&appid=" +
       weatherAPIKey;
     $.ajax({
       url: weatherQueryURL,
       method: "GET"
     }).then(function(results) {
       console.log(results.main.temp);
+      var tempEl = $("<p>");
+      var temp = Math.ceil(results.main.temp);
+      tempEl.text(temp);
+      $("#weather-card").append(tempEl);
     });
   }
+
+  getWeather();
 });
