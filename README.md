@@ -22,7 +22,7 @@ Project is created with :
 
 ## Setup
 
-## Author
+## Authors
 
 - Lisa Cabrera
 - Esther Walker
