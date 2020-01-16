@@ -1,89 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mamma Mia</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper red accent-4">
-          <a href="#" class="brand-logo"
-            ><i class="material-icons">whatshot</i>Mamma Mia</a
-          >
-          <ul id="nav-mobile" class="right">
-            <li>
-              <a href="index.html"><i class="material-icons">home</i></a>
-            </li>
-            <li>
-              <a href="favorite.html"><i class="material-icons">favorite</i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col s4">
-          <div class="card">
-            <div class="card-title center" id="artist-name"></div>
-            <div class="card-image" id="artist-image">
-            </div>
-            <div class="card-content">
-              <p>
-                This will show a pic of artist on top and the artist name (all
-                members if it's a group) below
-              </p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mamma Mia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper red accent-4">
+        <a href="#" class="brand-logo"><i class="material-icons">whatshot</i>Mamma Mia</a>
+        <ul id="nav-mobile" class="right">
+          <li>
+            <a href="index.html"><i class="material-icons">home</i></a>
+          </li>
+          <li>
+            <a href="favorite.html"><i class="material-icons">favorite</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s4">
+        <div class="card">
+          <div class="card-title center" id="artist-name"></div>
+          <div class="card-image" id="artist-image">
+          </div>
+          <div class="card-content">
+            <p>
+              This will show a pic of artist on top and the artist name (all
+              members if it's a group) below
+            </p>
           </div>
         </div>
-        <div class="col s4">
-          <div class="card">
-            <div class="card-title center">Concert Info</div>
-            <div class="card-image" id="venue-image"></div>
-            <div class="card-content">
-              <p>
-                This will show a pic of the venue on top with name of venue and the concert start
-                date/time below
-              </p>
-            </div>
+      </div>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-title center">Concert Info</div>
+          <div class="card-image" id="venue-image"></div>
+          <div class="card-content">
+            <p>
+              This will show a pic of the venue on top with name of venue and the concert start
+              date/time below
+            </p>
           </div>
         </div>
-        <div class="col s4">
-          <div class="card">
-            <div class="card-title center">Weather</div>
-            <div class="card-content">
-              <p>
-                This will show an icon of the weather on top and temperature,
-                humidity, wind below
-              </p>
-            </div>
+      </div>
+      <div class="col s4">
+        <div class="card">
+          <div class="card-title center">Weather</div>
+          <div class="card-content">
+            <div class="icon">Weather Icon</div>
+            <div class="temp">Temperature</div>
+            <div class="humidity">Humidity</div>
+            <div class="wind">Wind</div>
+            <p>
+              This will show an icon of the weather on top and temperature,
+              humidity, wind below
+            </p>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="fixed-action-btn" id="add-button">
-      <a class="btn-floating btn-large red">
-        <i class="material-icons">favorite_border</i>
-      </a>
-    </div>
+  <div class="fixed-action-btn" id="add-button">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">favorite_border</i>
+    </a>
+  </div>
 
-    <!--JavaScript Links-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script2.js"></script>
-  </body>
+  <!--JavaScript Links-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script2.js"></script>
+</body>
+
 </html>
