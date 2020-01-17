@@ -1,79 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Mamma Mia</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="style.css" />
-  </head>
-  <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper red accent-4">
-          <a href="index.html" class="brand-logo"
-            ><i class="material-icons">whatshot</i>Mamma Mia</a
-          >
-          <ul id="nav-mobile" class="right">
-            <li>
-              <a href="index.html"><i class="material-icons">home</i></a>
-            </li>
-            <li>
-              <a href="favorite.html"><i class="material-icons">favorite</i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
 
-    <div class="container">
-      <div class="row">
-        <div class="col s7">
-          <div class="card">
-            <div class="card-image" id="artist-image"></div>
-            <div class="card-title center" id="artist-name"></div>
-            <div class="card-content">
-              <p id="venue-name"></p>
-              <p id="date-info"></p>
-              <p id="address-info"></p>
-              <p id="city-info"></p>
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Mamma Mia</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper red accent-4">
+        <a href="index.html" class="brand-logo"><i class="material-icons">whatshot</i>Mamma Mia</a>
+        <ul id="nav-mobile" class="right">
+          <li>
+            <a href="index.html"><i class="material-icons">home</i></a>
+          </li>
+          <li>
+            <a href="favorite.html"><i class="material-icons">favorite</i></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col s7">
+        <div class="card">
+          <div class="card-image" id="artist-image"></div>
+          <div class="card-title center" id="artist-name"></div>
+          <div class="card-content">
+            <p id="venue-name"></p>
+            <p id="date-info"></p>
+            <p id="address-info"></p>
+            <p id="city-info"></p>
           </div>
         </div>
-        <div class="col s5">
-          <div class="card">
-            <div class="card-title center">Weather</div>
-            <div class="card-content">
-              <p>
-                This will show an icon of the weather on top and temperature,
-                humidity, wind below
-              </p>
-            </div>
+      </div>
+      <div class="col s5">
+        <div class="card">
+          <div class="card-title center">Weather</div>
+          <div class="card-content center">
+            <div id="icon"></div>
+            <div id="temp"></div>
+            <div id="humidity"></div>
+            <div id="wind"></div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+  </div>
 
-    <div class="fixed-action-btn" id="add-button">
-      <a class="btn-floating waves-effect waves-light btn-large blue">
-        <i class="material-icons">add</i>
-      </a>
-      <ul>
-        <li><p>Added to favorites</p></li>
-      </ul>
-    </div>
+  <div class="fixed-action-btn" id="add-button">
+    <a class="btn-floating waves-effect waves-light btn-large blue">
+      <i class="material-icons">add</i>
+    </a>
+    <ul>
+      <li>
+        <p>Added to favorites</p>
+      </li>
+    </ul>
+  </div>
 
-    <!--JavaScript Links-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="script2.js"></script>
-  </body>
+  <!--JavaScript Links-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="script2.js"></script>
+</body>
+
 </html>
