@@ -4,7 +4,8 @@ $(document).ready(function () {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
     var product = urlParams.get("id");
-
+    var cityName = urlParams.get("location");
+    console.log(cityName);
     function showEvents() {
         var queryURL = "https://app.ticketmaster.com/discovery/v2/events/" + product + "?apikey=" + ticketmasterAPIKey;
         $.ajax({
@@ -21,21 +22,25 @@ $(document).ready(function () {
         });
     }
     showEvents();
+
+
+
+    function getWeather() {
+        var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&units=imperial&appid=" + weatherAPIKey;
+        $.ajax({
+            url: weatherURL,
+            method: "GET",
+        }).then(function (response) {
+            let imgURL = './assets/' + response.weather[0].icon + '@2x.png';
+            console.log(weatherURL);
+            console.log(response);
+            var imageEl = $("<img>").attr("src", imgURL);
+            $('#icon').append(imageEl);
+            $('#temp').append("Temperature: " + Math.ceil(response.main.temp) + "°F");
+            $('#humidity').append("Humidity: " + response.main.humidity + " %");
+            $('#wind').append("Wind: " + response.wind.speed + "mph");
+
+        })
+    }
+    getWeather();
 });
-function getweather() {
-    var weatherURL = "https://api.openweathermap.org/data/2.5/weather?q=city&units=imperial=appid" + weatherAPIKey;
-    $.ajax({
-        url: weatherURL,
-        method: "GET",
-    }).then(function (response) {
-        let imgURL = './assets/' + result.weather[0].icon + '@2x.png';
-        console.log(weatherURL);
-        console.log(response);
-        $('#icon').attr("src", imgURL);
-        $('#temp').text(response.main.temp);
-        $('#humidity').text(response.main.humidity);
-        $('#wind').text(repsonse.wind.speed);
-
-    })
-}
-

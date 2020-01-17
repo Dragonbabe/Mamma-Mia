@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function () {
     var ticketmasterAPIKey = "eYcby1VpepV4bdXjIICIz5ShzAmEViXW";
     // var googleAPIKey = "AIzaSyAJuCV6lv5kU5C-95rJI6OLoWKCBAdTxe4";
     var weatherAPIKey = "bd0de12b6775f4d6b86662aff41e13a3";
@@ -8,12 +8,12 @@ $(document).ready(function() {
     var searchBtn = $("#search-button");
 
     var mainCarousel = document.querySelector(".carousel");
-    M.Carousel.init(mainCarousel,{});
+    M.Carousel.init(mainCarousel, {});
 
     var calendarGrid = document.querySelectorAll(".datepicker");
-    M.Datepicker.init(calendarGrid,{});
+    M.Datepicker.init(calendarGrid, {});
 
-    searchBtn.on("click", function(event) {
+    searchBtn.on("click", function (event) {
         event.preventDefault();
         $("#search-container").remove();
         var searchContainer = $("<div>");
@@ -29,7 +29,7 @@ $(document).ready(function() {
         var locationBox = $("#location");
         var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?classificationName=music&countryCode=US&sort=date,asc&apikey=" + ticketmasterAPIKey;
         if (selectedDate.val() !== "") {
-            queryURL = queryURL + "&startDateTime=" + dateValue.toISOString().split('.')[0]+"Z";
+            queryURL = queryURL + "&startDateTime=" + dateValue.toISOString().split('.')[0] + "Z";
         }
         if (locationBox.val() !== "") {
             queryURL = queryURL + "&city=[" + locationBox.val() + "]";
@@ -42,7 +42,7 @@ $(document).ready(function() {
             url: queryURL,
             method: "GET",
             dataType: "json"
-        }) .then(function(response) {
+        }).then(function (response) {
             console.log(response);
             if (response._embedded === undefined) {
                 $("#search-container").html("No results based on your search");
@@ -69,7 +69,7 @@ $(document).ready(function() {
                 var cardLinkDiv = $("<div>");
                 $(cardLinkDiv).attr("class", "card-action");
                 var cardLink = $("<a>");
-                $(cardLink).attr("href", "index2.html?id=" + response._embedded.events[i].id);
+                $(cardLink).attr("href", "index2.html?id=" + response._embedded.events[i].id + "&location=" + locationBox.val());
                 $(cardLink).text("More Info");
                 $(cardLinkDiv).append(cardLink);
                 $(card).append(cardContent);
@@ -111,13 +111,13 @@ $(document).ready(function() {
 
 
         // fix this (always removes the last item)
-        $(eraseBtn).on("click", function(){
+        $(eraseBtn).on("click", function () {
             eraseBtn.remove();
             localStorage.removeItem(id);
         });
     }
 
-    clearBtn.on("click", function() {
+    clearBtn.on("click", function () {
         localStorage.clear();
         favoriteList.remove("div");
     });
