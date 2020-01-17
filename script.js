@@ -1,24 +1,21 @@
 $(document).ready(function() {
     var ticketmasterAPIKey = "eYcby1VpepV4bdXjIICIz5ShzAmEViXW";
-    // var googleAPIKey = "AIzaSyAJuCV6lv5kU5C-95rJI6OLoWKCBAdTxe4";
-    var weatherAPIKey = "bd0de12b6775f4d6b86662aff41e13a3";
-
-    var favoriteList = $("#favorite-list");
-    var clearBtn = $("#clear-button");
     var searchBtn = $("#search-button");
 
     var mainCarousel = document.querySelector(".carousel");
     M.Carousel.init(mainCarousel,{});
 
     var calendarGrid = document.querySelectorAll(".datepicker");
-    M.Datepicker.init(calendarGrid,{});
+    M.Datepicker.init(calendarGrid,{
+        showClearBtn: true
+    });
 
     searchBtn.on("click", function(event) {
         event.preventDefault();
-        // $("#search-container").remove();
-        // var searchContainer = $("<div>");
-        // $(searchContainer).attr("id", "search-container")
-        // $("#big-container").append(searchContainer);
+        $("#search-container").remove();
+        var searchContainer = $("<div>");
+        $(searchContainer).attr("id", "search-container")
+        $("#big-container").append(searchContainer);
         getEvents();
     });
 
@@ -40,8 +37,7 @@ $(document).ready(function() {
 
         $.ajax({
             url: queryURL,
-            method: "GET",
-            dataType: "json"
+            method: "GET"
         }) .then(function(response) {
             console.log(response);
             if (response._embedded === undefined) {
@@ -84,50 +80,4 @@ $(document).ready(function() {
             };
         });
     }
-
-    // testing localStorage inputs
-    localStorage.setItem("Ozzy Osbourne", "1/11/2020")
-    localStorage.setItem("Justin Bieber", "2/17/2020")
-    localStorage.setItem("Coldplay", "5/21/2020")
-
-    for (var i = 0; i < localStorage.length; ++i) {
-        var id = localStorage.key(i);
-        var l1 = localStorage.getItem(id);
-        var eraseBtn = $("<div>");
-        var iconID = "xIcon" + i;
-
-        $(eraseBtn).attr("id", iconID);
-        $(eraseBtn).attr("class", "action-btn");
-        $(eraseBtn).html(id + " - " + l1);
-        $(eraseBtn).attr("class", "artistList");
-        var closeIcon = $("<span>");
-        $(closeIcon).attr("class", "waves-effect btn-flat");
-        var iconX = $("<i>");
-        iconX.text("close");
-        $(iconX).attr("class", "material-icons");
-        closeIcon.append(iconX);
-        eraseBtn.append(closeIcon);
-        favoriteList.append(eraseBtn);
-
-
-        // fix this (always removes the last item)
-        $(eraseBtn).on("click", function(){
-            eraseBtn.remove();
-            localStorage.removeItem(id);
-        });
-    }
-
-    clearBtn.on("click", function() {
-        localStorage.clear();
-        favoriteList.remove("div");
-    });
-
-    // var addBtn = $("#add-button");
-    // var artistName = $("#artist-name");
-    // var eventDate = $("#event-date")
-
-    // addBtn.on("click", function() {
-    //     localStorage.setItem(artistName, eventDate);
-    // })
-
 });
