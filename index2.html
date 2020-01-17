@@ -15,7 +15,7 @@
   <div class="navbar-fixed">
     <nav>
       <div class="nav-wrapper red accent-4">
-        <a href="#" class="brand-logo"><i class="material-icons">whatshot</i>Mamma Mia</a>
+        <a href="index.html" class="brand-logo"><i class="material-icons">whatshot</i>Mamma Mia</a>
         <ul id="nav-mobile" class="right">
           <li>
             <a href="index.html"><i class="material-icons">home</i></a>
@@ -30,35 +30,22 @@
 
   <div class="container">
     <div class="row">
-      <div class="col s4">
+      <div class="col s7">
         <div class="card">
+          <div class="card-image" id="artist-image"></div>
           <div class="card-title center" id="artist-name"></div>
-          <div class="card-image" id="artist-image">
-          </div>
           <div class="card-content">
-            <p>
-              This will show a pic of artist on top and the artist name (all
-              members if it's a group) below
-            </p>
+            <p id="venue-name"></p>
+            <p id="date-info"></p>
+            <p id="address-info"></p>
+            <p id="city-info"></p>
           </div>
         </div>
       </div>
-      <div class="col s4">
-        <div class="card">
-          <div class="card-title center">Concert Info</div>
-          <div class="card-image" id="venue-image"></div>
-          <div class="card-content">
-            <p>
-              This will show a pic of the venue on top with name of venue and the concert start
-              date/time below
-            </p>
-          </div>
-        </div>
-      </div>
-      <div class="col s4">
+      <div class="col s5">
         <div class="card">
           <div class="card-title center">Weather</div>
-          <div class="card-content">
+          <div class="card-content center">
             <div id="icon"></div>
             <div id="temp"></div>
             <div id="humidity"></div>
@@ -68,11 +55,17 @@
       </div>
     </div>
   </div>
+  </div>
 
   <div class="fixed-action-btn" id="add-button">
-    <a class="btn-floating btn-large red">
-      <i class="material-icons">favorite_border</i>
+    <a class="btn-floating waves-effect waves-light btn-large blue">
+      <i class="material-icons">add</i>
     </a>
+    <ul>
+      <li>
+        <p>Added to favorites</p>
+      </li>
+    </ul>
   </div>
 
   <!--JavaScript Links-->
