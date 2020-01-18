@@ -65,7 +65,7 @@ $(document).ready(function () {
                 var cardLinkDiv = $("<div>");
                 $(cardLinkDiv).attr("class", "card-action");
                 var cardLink = $("<a>");
-                $(cardLink).attr("href", "index2.html?id=" + response._embedded.events[i].id + "&location=" + locationBox.val());
+                $(cardLink).attr("href", "index2.html?id=" + response._embedded.events[i].id);
                 $(cardLink).text("More Info");
                 $(cardLinkDiv).append(cardLink);
                 $(card).append(cardContent);
