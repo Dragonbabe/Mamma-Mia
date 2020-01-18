@@ -4,7 +4,7 @@ $(document).ready(function () {
     var queryString = window.location.search;
     var urlParams = new URLSearchParams(queryString);
     var product = urlParams.get("id");
-    var cityName = urlParams.get("location");
+    var cityName; 
 
     function showEvents() {
         var queryURL = "https://app.ticketmaster.com/discovery/v2/events/" + product + "?apikey=" + ticketmasterAPIKey;
@@ -12,7 +12,6 @@ $(document).ready(function () {
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            console.log(response);
             var artistName = $("#artist-name");
             $(artistName).text(response.name);
             var artistImage = $("<img>");
@@ -26,6 +25,9 @@ $(document).ready(function () {
             }
             $("#address-info").text(response._embedded.venues[0].address.line1);
             $("#city-info").text(response._embedded.venues[0].city.name + ", " + response._embedded.venues[0].state.stateCode);
+            cityName = response._embedded.venues[0].city.name;
+
+            getWeather();
         });
     }
     showEvents();
@@ -37,17 +39,13 @@ $(document).ready(function () {
             method: "GET",
         }).then(function (response) {
             let imgURL = 'https://openweathermap.org/img/wn/' + response.weather[0].icon + '@2x.png';
-            console.log(weatherURL);
-            console.log(response);
             var imageEl = $("<img>").attr("src", imgURL);
             $('#icon').append(imageEl);
             $('#temp').append("Temperature: " + Math.ceil(response.main.temp) + "°F");
             $('#humidity').append("Humidity: " + response.main.humidity + " %");
-            $('#wind').append("Wind: " + response.wind.speed + "mph");
-
+            $('#wind').append("Wind: " + response.wind.speed + " mph");
         })
     }
-    getWeather();
 
     var floatingBtn = document.querySelectorAll(".fixed-action-btn");
     M.FloatingActionButton.init(floatingBtn, {
